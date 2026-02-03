@@ -20,6 +20,14 @@
             position: relative;
         }
 
+        /* Force le texte à rester dans les limites */
+        .love-poem p,
+        .message {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+
         /* Animated Background */
         .background {
             position: fixed;
@@ -229,6 +237,7 @@
             border-radius: 30px;
             padding: 3rem;
             max-width: 700px;
+            width: 100%;
             margin-bottom: 2rem;
             border: 2px solid rgba(255, 100, 150, 0.3);
             box-shadow: 
@@ -359,7 +368,7 @@
         }
 
         .hidden-content.revealed {
-            max-height: 1000px;
+            max-height: 2000px;
         }
 
         .love-poem {
@@ -404,26 +413,123 @@
             to { opacity: 1; }
         }
 
-        /* Responsive */
+        /* Responsive - Tablettes */
         @media (max-width: 768px) {
             .name-letter {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
             .subtitle {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
+                padding: 0 1rem;
             }
             .message {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
+                padding: 0 0.5rem;
             }
             .message-main {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
+                padding: 0 0.5rem;
             }
             .reveal-button {
-                padding: 1rem 2rem;
+                padding: 1.2rem 2.5rem;
                 font-size: 1.2rem;
             }
             .message-card {
                 padding: 2rem;
+                margin: 0 1rem 2rem 1rem;
+                max-width: calc(100% - 2rem);
+            }
+            .love-poem {
+                padding: 1.5rem;
+            }
+            .love-poem p {
+                font-size: 1.2rem;
+                line-height: 1.9;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Responsive - Smartphones */
+        @media (max-width: 480px) {
+            .name-letter {
+                font-size: 2.8rem;
+                margin: 0 0.05em;
+            }
+            .subtitle {
+                font-size: 1.2rem;
+                padding: 0 0.8rem;
+                line-height: 1.6;
+            }
+            .message {
+                font-size: 1.1rem;
+                padding: 0 0.3rem;
+                line-height: 1.8;
+            }
+            .message-main {
+                font-size: 1.3rem;
+                padding: 0 0.3rem;
+                line-height: 1.6;
+            }
+            .reveal-button {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                width: 90%;
+                max-width: 300px;
+            }
+            .message-card {
+                padding: 1.5rem;
+                margin: 0 0.5rem 2rem 0.5rem;
+                max-width: calc(100% - 1rem);
+                border-radius: 20px;
+            }
+            .love-poem {
+                padding: 1.2rem;
+            }
+            .love-poem p {
+                font-size: 1.05rem;
+                line-height: 1.8;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            .container {
+                padding: 1rem 0.5rem;
+            }
+            .signature {
+                font-size: 1.4rem;
+                padding: 0 1rem;
+            }
+            .rose-divider {
+                font-size: 2rem;
+            }
+        }
+
+        /* Très petits écrans (iPhone SE, etc.) */
+        @media (max-width: 375px) {
+            .name-letter {
+                font-size: 2.5rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+                padding: 0 0.5rem;
+            }
+            .message {
+                font-size: 1rem;
+            }
+            .message-main {
+                font-size: 1.2rem;
+            }
+            .love-poem p {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+            .message-card {
+                padding: 1.2rem;
+            }
+            .reveal-button {
+                font-size: 1rem;
+                padding: 0.9rem 1.5rem;
             }
         }
 
@@ -458,7 +564,7 @@
 
     <!-- Audio Element -->
     <audio id="bgMusic" loop>
-        <source src="https://cdnjs.cloudflare.com/ajax/libs/音乐/romantic-piano.mp3" type="audio/mpeg">
+        <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_4f0d0b8e36.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Main Container -->
@@ -492,8 +598,7 @@
             </div>
 
             <div class="message">
-                Et ton sourire  marqué par ce diastème que 
-                j’aime tant  rend mon monde plus beau
+                Et ton sourire marqué par ce diastème que j'aime tant rend mon monde plus beau
             </div>
 
             <div class="rose-divider">💕</div>
@@ -506,23 +611,13 @@
                 <div class="love-poem">
                     <p><strong>Jemira, mon amour profond et passionné,</strong></p>
                     
-                    <p>Quand je suis avec toi, tout paraît plus léger, les heures passent en un souffle,
-                         et chaque seconde me rappelle combien j’aime être près de toi
-                         
-                        </p> <br>
-                    <p> Tu ne pas seulement ma partenaire,
-                        tu es mon âme soeur, ma meilleur amie,
-                        la personne qui me complique trop pour scene 
-                        mais que j'aime tant .<br></p>
+                    <p>Quand je suis avec toi, tout paraît plus léger, les heures passent en un souffle, et chaque seconde me rappelle combien j'aime être près de toi.</p>
 
-                    <p>Ton amour m'a appris ce que signifie vraiment aimer :<br>
-                    c'est vouloir ton bonheur,<br>
-                    c'est te soutenir dans tes rêves,<br>
-                    c'est être là, toujours, quoi qu'il arrive.</p>
+                    <p>Tu n'es pas seulement ma partenaire, tu es mon âme sœur, ma meilleure amie, la personne qui me complique trop pour scene mais que j'aime tant.</p>
 
-                    <p><strong>Je t'aime plus que les mots ne pourront jamais l'exprimer.</strong><br>
-                    Je t'aime avec une intensité qui me surprend chaque jour.<br>
-                    Je t'aime avec tendresse, passion, et dévotion absolue.</p>
+                    <p>Ton amour m'a appris ce que signifie vraiment aimer : c'est vouloir ton bonheur, c'est te soutenir dans tes rêves, c'est être là, toujours, quoi qu'il arrive.</p>
+
+                    <p><strong>Je t'aime plus que les mots ne pourront jamais l'exprimer.</strong> Je t'aime avec une intensité qui me surprend chaque jour. Je t'aime avec tendresse, passion, et dévotion absolue.</p>
 
                     <p>💝 Tu es mon aujourd'hui et tous mes demains 💝</p>
                 </div>
@@ -581,19 +676,31 @@
         const bgMusic = document.getElementById('bgMusic');
         let musicPlaying = false;
 
-        // Note: Since we can't load external audio easily, we'll simulate it
-        // In a real implementation, you would use a valid audio file URL
+        bgMusic.volume = 0.3;
+
         musicControl.addEventListener('click', function() {
             if (!musicPlaying) {
-                // Simulate music playing
-                musicControl.textContent = '🎶';
-                musicControl.style.animation = 'pulse 1s infinite';
-                musicPlaying = true;
-                
-                // Show a message that music would play
-                createSparkle(this.getBoundingClientRect().left + 30, 
-                             this.getBoundingClientRect().top + 30);
+                bgMusic.play().then(() => {
+                    musicControl.textContent = '🎶';
+                    musicControl.style.animation = 'pulse 1s infinite';
+                    musicPlaying = true;
+                    
+                    for (let i = 0; i < 15; i++) {
+                        setTimeout(() => {
+                            createSparkle(
+                                this.getBoundingClientRect().left + 30 + (Math.random() - 0.5) * 60, 
+                                this.getBoundingClientRect().top + 30 + (Math.random() - 0.5) * 60
+                            );
+                        }, i * 50);
+                    }
+                }).catch(error => {
+                    console.log('Audio playback failed:', error);
+                    musicControl.textContent = '🎶';
+                    musicControl.style.animation = 'pulse 1s infinite';
+                    musicPlaying = true;
+                });
             } else {
+                bgMusic.pause();
                 musicControl.textContent = '🎵';
                 musicControl.style.animation = 'none';
                 musicPlaying = false;
